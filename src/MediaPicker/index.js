@@ -1,7 +1,8 @@
 import React from 'react';
+import './MediaPicker.css';
 
 const MediaPicker = () => (
-  <aside>
+  <aside className="media-picker">
     <section>
       <h2>Medie</h2>
 

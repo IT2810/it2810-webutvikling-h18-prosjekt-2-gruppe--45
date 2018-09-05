@@ -1,7 +1,8 @@
 import React from 'react';
+import './ArtDisplay.css';
 
 const ArtDisplay = () => (
-  <div>
+  <div className="art-display">
     Dynamic image thing here
   </div>
 );
