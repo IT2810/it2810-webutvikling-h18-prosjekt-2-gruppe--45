@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Children } from 'react';
 import MediaPicker from '../MediaPicker';
 import ArtPicker from '../ArtPicker';
 import ArtDisplay from '../ArtDisplay';
@@ -10,9 +10,10 @@ class Gallery extends Component {
    * @type {{image: string, audio: string, text: string}}
    */
   state = {
-    image: 'chicken',
+    image: 'chickens',
     audio: 'pigs',
     text: 'flames',
+    entry: 0,
   };
 
   handleImageChange = event => {
@@ -33,21 +34,35 @@ class Gallery extends Component {
     });
   };
 
+  handleArtChange = key => {
+    this.setState({
+      entry: key,
+    });
+  };
+
   render() {
+    const DataWrapper = ({ children }) =>
+      Children.map(children, child =>
+        React.cloneElement(child, {
+          selectedImage: this.state.image,
+          selectedAudio: this.state.audio,
+          selectedText: this.state.text,
+        }),
+      );
+
     return (
       <div className="gallery">
-        <MediaPicker
-          onImageChange={this.handleImageChange}
-          onAudioChange={this.handleAudioChange}
-          onTextChange={this.handleTextChange}
-          selectedImage={this.state.image}
-          selectedAudio={this.state.audio}
-          selectedText={this.state.text}
-        />
+        <DataWrapper>
+          <MediaPicker
+            onImageChange={this.handleImageChange}
+            onAudioChange={this.handleAudioChange}
+            onTextChange={this.handleTextChange}
+          />
 
-        <ArtPicker />
+          <ArtPicker onChange={this.handleArtChange} />
 
-        <ArtDisplay />
+          <ArtDisplay entry={this.state.entry} />
+        </DataWrapper>
       </div>
     );
   }

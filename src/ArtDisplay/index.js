@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import ArtDisplayView from './ArtDisplayView';
 import './ArtDisplay.css';
+import files from '../Gallery/files';
 
 const Container = ({ children }) => (
   <div className="art-display">{children}</div>
 );
+
+const getImageLink = (selectedImage, entry) =>
+  `images/${selectedImage}/${files.images[selectedImage][entry]}`;
 
 class ArtDisplay extends Component {
   state = {
@@ -46,7 +50,9 @@ class ArtDisplay extends Component {
   };
 
   loadImage = async () => {
-    const response = await fetch('/images/flames/24143.svg');
+    const response = await fetch(
+      getImageLink(this.props.selectedImage, this.props.entry),
+    );
     const data = await response.text();
 
     this.setState({

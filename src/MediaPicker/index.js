@@ -24,8 +24,8 @@ const MediaPicker = ({
                 <input
                   name="image"
                   type="radio"
-                  value="chicken"
-                  checked={selectedImage === 'chicken'}
+                  value="chickens"
+                  checked={selectedImage === 'chickens'}
                   onChange={onImageChange}
                 />
                 Kyllinger
@@ -81,8 +81,8 @@ const MediaPicker = ({
                 <input
                   name="audio"
                   type="radio"
-                  value="flames"
-                  checked={selectedAudio === 'flames'}
+                  value="fire"
+                  checked={selectedAudio === 'fire'}
                   onChange={onAudioChange}
                 />
                 Flammer
