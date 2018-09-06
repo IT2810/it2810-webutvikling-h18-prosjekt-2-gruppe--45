@@ -1,3 +1,15 @@
 .gallery {
-  background: pink;
+  display: grid;
+  grid-template-areas:
+    "media-picker"
+    "art-picker"
+    "art-display";
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-areas:
+      "art-picker media-picker"
+      "art-display media-picker";
+  }
 }

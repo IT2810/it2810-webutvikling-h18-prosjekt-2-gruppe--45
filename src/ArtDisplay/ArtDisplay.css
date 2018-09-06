@@ -1,3 +1,4 @@
 .art-display {
   background: blue;
+  grid-area: art-display;
 }

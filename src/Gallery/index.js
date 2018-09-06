@@ -6,9 +6,9 @@ import './Gallery.css';
 
 const Gallery = () => (
   <div className="gallery">
+    <MediaPicker />
     <ArtPicker />
     <ArtDisplay />
-    <MediaPicker />
   </div>
 );
 

@@ -1,3 +1,4 @@
 .media-picker {
   background: orange;
+  grid-area: media-picker;
 }

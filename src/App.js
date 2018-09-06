@@ -1,8 +1,9 @@
 import React from 'react';
 import Gallery from './Gallery';
+import './App.css';
 
 const App = () => (
-  <main>
+  <main className="container">
     <Gallery />  
   </main>
 );

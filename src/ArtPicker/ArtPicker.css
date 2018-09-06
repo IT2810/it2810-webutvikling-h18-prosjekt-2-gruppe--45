@@ -1,3 +1,5 @@
 .art-picker {
   background: red;
+  grid-area: art-picker;
+  display: flex;
 }
