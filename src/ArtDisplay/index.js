@@ -10,6 +10,9 @@ const Container = ({ children }) => (
 const getImageLink = (selectedImage, entry) =>
   `images/${selectedImage}/${files.images[selectedImage][entry]}`;
 
+const getAudioLink = (selectedAudio, entry) =>
+  `audio/${selectedAudio}/${files.audio[selectedAudio][entry]}`;
+
 class ArtDisplay extends Component {
   state = {
     // Whether or not new data is currently being loaded.
@@ -97,7 +100,7 @@ class ArtDisplay extends Component {
         <ArtDisplayView
           image={this.state.image}
           text={this.state.text}
-          audio="/audio/weather/thunder.mp3"
+          audio={getAudioLink(this.props.selectedAudio, this.props.entry)}
         />
       </Container>
     );
