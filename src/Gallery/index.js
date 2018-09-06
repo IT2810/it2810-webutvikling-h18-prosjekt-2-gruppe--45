@@ -19,18 +19,21 @@ class Gallery extends Component {
   handleImageChange = event => {
     this.setState({
       image: event.currentTarget.value,
+      entry: 0,
     });
   };
 
   handleAudioChange = event => {
     this.setState({
       audio: event.currentTarget.value,
+      entry: 0,
     });
   };
 
   handleTextChange = event => {
     this.setState({
       text: event.currentTarget.value,
+      entry: 0,
     });
   };
 
