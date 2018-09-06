@@ -1,8 +1,7 @@
-import React from 'react';
-import './ArtDisplayView.css';
+import React, { Fragment } from 'react';
 
 const ArtDisplay = ({ image, audio, text }) => (
-  <div className="art-display">
+  <Fragment>
     <div dangerouslySetInnerHTML={{ __html: image }} />
 
     <p>{text}</p>
@@ -10,7 +9,7 @@ const ArtDisplay = ({ image, audio, text }) => (
     <audio loop autoPlay>
       <source src={audio} type="audio/mpeg" />
     </audio>
-  </div>
+  </Fragment>
 );
 
 export default ArtDisplay;
