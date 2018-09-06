@@ -2,3 +2,7 @@
   background: orange;
   grid-area: media-picker;
 }
+
+li {
+  list-style-type: none;
+}
