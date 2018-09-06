@@ -1,0 +1,5 @@
+Sindre wird für Heiligabend Rippchen kochen und einem Rezept folgen, das er im Internet gefunden hat. Wir können davon ausgehen, dass die Temperatur in der Küche 21 Grad beträgt. Darüber hinaus gehen wir davon aus, dass Newtons Kühlgesetze so angewendet werden, dass die Temperatur in den Rippen proportional zum Temperaturunterschied zwischen der Umgebung (Küche oder Ofen) und den Rippen geändert wird. Au􏰂erdem gehen wir davon aus, dass sich die Temperatur im Sindre-Ofen kurzzeitig auf die gewünschte Temperatur ändert, wenn Sindre den Schalter einschaltet.
+
+a) Sindre nimmt eine Stunde vor dem Kochen Rippen aus dem Kühlschrank. Er ersticht sofort das Eintopf-Thermometer und liest, dass die Temperatur 4 Grad beträgt. Als er Rippen in den Ofen steckt, liest er, dass die Temperatur 7 Grad beträgt. Er lässt die Rippen für 30 Minuten bei 230 Grad rösten. Was zeigt dann der Eintopf-Zähler?
+
+b) Nach dem Rezept wird nun Sindre die Temperatur auf 160 Grad senken und Rippen entfernen, wenn das Thermometer 75 Grad anzeigt. Allerdings hat er jetzt nicht mehr als zwei Stunden zur Verfügung. Was muss er stattdessen ändern, damit das Weihnachtsessen pünktlich zu Ende geht?
