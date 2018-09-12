@@ -1,6 +1,15 @@
-@media(min-width: 800px) {
+.container {
+  width: 90%;
+  margin: 1em auto;
+}
+
+@media (min-width: 800px) {
   .container {
     width: 75%;
-    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  html {
+    background: whitesmoke;
   }
 }

@@ -1,8 +1,5 @@
 .art-display {
   background: blue;
-  /*
   grid-area: art-display;
-  */
-
   padding: 1em;
 }

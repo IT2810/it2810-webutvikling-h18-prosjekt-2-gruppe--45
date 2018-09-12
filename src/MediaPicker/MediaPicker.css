@@ -1,11 +1,33 @@
 .media-picker {
   background: orange;
-  /*
   grid-area: media-picker;
-  */
-  padding: 1em;
+  padding: 0.5em;
+  min-width: 150px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-one {
+  flex: 1;
 }
 
 li {
   list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .flex {
+    display: block;
+  }
 }

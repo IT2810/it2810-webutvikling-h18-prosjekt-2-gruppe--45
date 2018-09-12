@@ -1,11 +1,9 @@
 .gallery {
   display: grid;
-  /*
   grid-template-areas:
-    "media-picker"
-    "art-picker"
-    "art-display";
-  */
+    'art-picker'
+    'art-display'
+    'media-picker';
 }
 
 @media (min-width: 800px) {

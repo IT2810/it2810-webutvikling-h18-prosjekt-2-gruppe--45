@@ -1,15 +1,22 @@
 .art-picker {
   display: flex;
-  /*
   grid-area: art-picker;
-  */
   max-height: 4em;
 }
 
 .art-picker > div {
-  background: red;
+  cursor: pointer;
   flex: 1;
-  margin: 0 1em 0 1em;
+  margin: 0 0.5em 0 0.5em;
   padding: 1em;
   text-align: center;
+  border: 1px solid black;
+  border-bottom: none;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
+
+.art-picker > div:hover {
+  text-decoration: underline;
 }
