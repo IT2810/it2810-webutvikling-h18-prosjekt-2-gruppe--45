@@ -1,6 +1,9 @@
 .media-picker {
   background: orange;
+  /*
   grid-area: media-picker;
+  */
+  padding: 1em;
 }
 
 li {

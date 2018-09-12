@@ -1,15 +1,47 @@
 .gallery {
   display: grid;
+  /*
   grid-template-areas:
     "media-picker"
     "art-picker"
     "art-display";
+  */
 }
 
 @media (min-width: 800px) {
-  .gallery {
+  /*.gallery {
     grid-template-areas:
       "art-picker media-picker"
+      "art-display media-picker"
+      "art-display media-picker"
+      "art-display media-picker"
       "art-display media-picker";
+  }
+  */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .media-picker {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+
+  .art-picker {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .art-display {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 6;
   }
 }

@@ -1,5 +1,15 @@
 .art-picker {
-  background: red;
-  grid-area: art-picker;
   display: flex;
+  /*
+  grid-area: art-picker;
+  */
+  max-height: 4em;
+}
+
+.art-picker > div {
+  background: red;
+  flex: 1;
+  margin: 0 1em 0 1em;
+  padding: 1em;
+  text-align: center;
 }
