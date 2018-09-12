@@ -1,8 +1,9 @@
 import React from 'react';
 import './MediaPicker.css';
+import { subCategories } from '../Gallery/files';
 
 /**
- * Class for handling users mediapicks.
+ * Class for handling users picking media category.
  */
 const MediaPicker = ({
   onImageChange,
@@ -16,42 +17,39 @@ const MediaPicker = ({
     <form>
       <div>
         <h2>Bilder</h2>
-
         <div>
           <ul>
             <li>
               <label>
                 <input
-                  name="image"
-                  type="radio"
-                  value="chickens"
-                  checked={selectedImage === 'chickens'}
+                  name={'image'}
+                  type={'radio'}
+                  value={subCategories.CHICKEN}
+                  checked={selectedImage === subCategories.CHICKEN}
                   onChange={onImageChange}
                 />
-                Kyllinger
+                Chickens
               </label>
             </li>
-
             <li>
               <label>
                 <input
-                  name="image"
-                  type="radio"
-                  value="flames"
-                  checked={selectedImage === 'flames'}
+                  name={'image'}
+                  type={'radio'}
+                  value={subCategories.FLAMES}
+                  checked={selectedImage === subCategories.FLAMES}
                   onChange={onImageChange}
                 />
-                Flammer
+                Flames
               </label>
             </li>
-
             <li>
               <label>
                 <input
-                  name="image"
-                  type="radio"
-                  value="weather"
-                  checked={selectedImage === 'weather'}
+                  name={'image'}
+                  type={'radio'}
+                  value={subCategories.WEATHER}
+                  checked={selectedImage === subCategories.WEATHER}
                   onChange={onImageChange}
                 />
                 Weather
@@ -61,16 +59,15 @@ const MediaPicker = ({
         </div>
 
         <h2>Lyder</h2>
-
         <div>
           <ul>
             <li>
               <label>
                 <input
-                  name="audio"
-                  type="radio"
-                  value="pigs"
-                  checked={selectedAudio === 'pigs'}
+                  name={'audio'}
+                  type={'radio'}
+                  value={subCategories.PIGS}
+                  checked={selectedAudio === subCategories.PIGS}
                   onChange={onAudioChange}
                 />
                 Griser
@@ -79,10 +76,10 @@ const MediaPicker = ({
             <li>
               <label>
                 <input
-                  name="audio"
-                  type="radio"
-                  value="fire"
-                  checked={selectedAudio === 'fire'}
+                  name={'audio'}
+                  type={'radio'}
+                  value={subCategories.FLAMES}
+                  checked={selectedAudio === subCategories.FLAMES}
                   onChange={onAudioChange}
                 />
                 Flammer
@@ -91,29 +88,28 @@ const MediaPicker = ({
             <li>
               <label>
                 <input
-                  name="audio"
-                  type="radio"
-                  value="weather"
-                  checked={selectedAudio === 'weather'}
+                  name={'audio'}
+                  type={'radio'}
+                  value={subCategories.WEATHER}
+                  checked={selectedAudio === subCategories.WEATHER}
                   onChange={onAudioChange}
                 />
-                Vær
+                Weather
               </label>
             </li>
           </ul>
         </div>
 
         <h2>Tekst</h2>
-
         <div>
           <ul>
             <li>
               <label>
                 <input
-                  name="text"
-                  type="radio"
-                  value="flames"
-                  checked={selectedText === 'flames'}
+                  name={'text'}
+                  type={'radio'}
+                  value={subCategories.FLAMES}
+                  checked={selectedText === subCategories.FLAMES}
                   onChange={onTextChange}
                 />
                 Brennende dikt
@@ -122,10 +118,10 @@ const MediaPicker = ({
             <li>
               <label>
                 <input
-                  name="text"
-                  type="radio"
-                  value="jokes"
-                  checked={selectedText === 'jokes'}
+                  name={'text'}
+                  type={'radio'}
+                  value={subCategories.JOKES}
+                  checked={selectedText === subCategories.JOKES}
                   onChange={onTextChange}
                 />
                 Vitser
@@ -134,10 +130,10 @@ const MediaPicker = ({
             <li>
               <label>
                 <input
-                  name="text"
-                  type="radio"
-                  value="songs"
-                  checked={selectedText === 'songs'}
+                  name={'text'}
+                  type={'radio'}
+                  value={subCategories.SONGS}
+                  checked={selectedText === subCategories.SONGS}
                   onChange={onTextChange}
                 />
                 Sanger

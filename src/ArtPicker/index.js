@@ -9,6 +9,9 @@ const ArtPicker = ({
   selectedText,
   onChange,
 }) => {
+  console.log(selectedAudio);
+  console.log(selectedImage);
+  console.log(files.images[selectedImage] + ' ' + files.audio[selectedAudio]);
   // Ensure there are enough entries able for each media type.
   const available = Math.min(
     files.images[selectedImage].length,

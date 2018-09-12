@@ -1,3 +1,12 @@
+export const subCategories = {
+  CHICKEN: 'chicken',
+  PIGS: 'pigs',
+  FLAMES: 'flames',
+  WEATHER: 'weather',
+  JOKES: 'jokes',
+  SONGS: 'songs',
+};
+
 const files = {
   audio: {
     fire: ['fireplace.mp3', 'feuer.mp3', 'fire1.mp3', 'fire2.mp3'],
@@ -6,14 +15,9 @@ const files = {
   },
 
   images: {
-    chickens: ['chicken1.svg', 'chicken2.svg', 'chicken3.svg', 'chicken4.svg'],
-    flames: ['blue-flame.svg', 'candle.svg', 'flame.svg', 'forest-fire.svg'],
-    weather: [
-      'black-ice.svg',
-      'cloud-sun.svg',
-      'overcast.svg',
-      'thunderstorm.svg',
-    ],
+    chicken: ['chicken1.svg', 'chicken2.svg', 'chicken3.svg', 'chicken4.svg'],
+    flames: ['flames1.svg', 'flames2.svg', 'flames3.svg', 'flames4.svg'],
+    weather: ['weather1.svg', 'weather2.svg', 'weather3.svg', 'weather4.svg'],
   },
 
   text: null, // TODO: Needs to use JSON files
