@@ -26,6 +26,9 @@ class ArtDisplay extends Component {
 
     // The currently visible text.
     text: null,
+
+    // A map with paths to assets storing the data stored at the endpoint.
+    cache: {},
   };
 
   load = async () => {
@@ -37,7 +40,7 @@ class ArtDisplay extends Component {
 
     try {
       // Using this helper allows us to run both fetch calls in parallel.
-      // Note that this throws if any of the two
+      // Note that this throws if any of the two promises fail.
       await Promise.all([this.loadImage(), this.loadText()]);
     } catch (error) {
       // Notify the user that an error happened.
@@ -53,23 +56,53 @@ class ArtDisplay extends Component {
   };
 
   loadImage = async () => {
-    const response = await fetch(
-      getImageLink(this.props.selectedImage, this.props.entry),
-    );
+    const path = getImageLink(this.props.selectedImage, this.props.entry);
+
+    if (this.state.cache[path]) {
+      this.setState({
+        image: this.state.cache[path],
+      });
+
+      return;
+    }
+
+    const response = await fetch(path);
+
     const data = await response.text();
 
-    this.setState({
+    this.setState(prevState => ({
       image: data,
-    });
+
+      cache: {
+        ...prevState.cache,
+        [path]: data,
+      },
+    }));
   };
 
   loadText = async () => {
-    const response = await fetch('/text/burning/flame.txt');
+    const path = '/text/burning/flame.txt';
+
+    if (this.state.cache[path]) {
+      this.setState({
+        text: this.state.cache[path],
+      });
+
+      return;
+    }
+
+    const response = await fetch(path);
+
     const data = await response.text();
 
-    this.setState({
+    this.setState(prevState => ({
       text: data,
-    });
+
+      cache: {
+        ...prevState.cache,
+        [path]: data,
+      },
+    }));
   };
 
   componentDidMount() {

@@ -1,4 +1,4 @@
-import React, { Component, Children } from 'react';
+import React, { Component } from 'react';
 import MediaPicker from '../MediaPicker';
 import ArtPicker from '../ArtPicker';
 import ArtDisplay from '../ArtDisplay';
@@ -44,28 +44,30 @@ class Gallery extends Component {
   };
 
   render() {
-    const DataWrapper = ({ children }) =>
-      Children.map(children, child =>
-        React.cloneElement(child, {
-          selectedImage: this.state.image,
-          selectedAudio: this.state.audio,
-          selectedText: this.state.text,
-        }),
-      );
-
     return (
       <div className="gallery">
-        <DataWrapper>
-          <MediaPicker
-            onImageChange={this.handleImageChange}
-            onAudioChange={this.handleAudioChange}
-            onTextChange={this.handleTextChange}
-          />
+        <MediaPicker
+          onImageChange={this.handleImageChange}
+          onAudioChange={this.handleAudioChange}
+          onTextChange={this.handleTextChange}
+          selectedImage={this.state.image}
+          selectedAudio={this.state.audio}
+          selectedText={this.state.text}
+        />
 
-          <ArtPicker onChange={this.handleArtChange} />
+        <ArtPicker
+          onChange={this.handleArtChange}
+          selectedImage={this.state.image}
+          selectedAudio={this.state.audio}
+          selectedText={this.state.text}
+        />
 
-          <ArtDisplay entry={this.state.entry} />
-        </DataWrapper>
+        <ArtDisplay
+          entry={this.state.entry}
+          selectedImage={this.state.image}
+          selectedAudio={this.state.audio}
+          selectedText={this.state.text}
+        />
       </div>
     );
   }
