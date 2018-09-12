@@ -13,10 +13,13 @@ const getImageLink = (selectedImage, entry) =>
 const getAudioLink = (selectedAudio, entry) =>
   `audio/${selectedAudio}/${files.audio[selectedAudio][entry]}`;
 
+const getTextLink = (selectedText, entry) =>
+  `text/${selectedText}/${files.text[selectedText][entry]}`;
+
 class ArtDisplay extends Component {
   state = {
     // Whether or not new data is currently being loaded.
-    loading: false,
+    loading: true,
 
     // Whether or not an error occured while loading data.
     error: false,
@@ -81,7 +84,7 @@ class ArtDisplay extends Component {
   };
 
   loadText = async () => {
-    const path = '/text/burning/flame.txt';
+    const path = getTextLink(this.props.selectedText, this.props.entry);
 
     if (this.state.cache[path]) {
       this.setState({
@@ -93,7 +96,7 @@ class ArtDisplay extends Component {
 
     const response = await fetch(path);
 
-    const data = await response.text();
+    const data = await response.json();
 
     this.setState(prevState => ({
       text: data,

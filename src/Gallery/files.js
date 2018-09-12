@@ -16,7 +16,16 @@ const files = {
     ],
   },
 
-  text: null, // TODO: Needs to use JSON files
+  text: {
+    flames: [
+      'burning1.json',
+      'burning2.json',
+      'burning3.json',
+      'burning4.json',
+    ],
+    jokes: ['joke1.json', 'joke2.json', 'joke3.json', 'joke4.json'],
+    songs: ['songs1.json', 'songs2.json', 'songs3.json', 'songs4.json'],
+  },
 };
 
 export default files;

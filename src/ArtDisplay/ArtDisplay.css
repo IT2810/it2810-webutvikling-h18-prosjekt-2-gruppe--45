@@ -2,3 +2,7 @@
   background: blue;
   grid-area: art-display;
 }
+
+.text {
+  white-space: pre-wrap;
+}

@@ -4,7 +4,9 @@ const ArtDisplay = ({ image, audio, text }) => (
   <Fragment>
     <div dangerouslySetInnerHTML={{ __html: image }} />
 
-    <p>{text}</p>
+    <h3>{text.title}</h3>
+    <p className="text">{text.text}</p>
+    <p>{text.author}</p>
 
     <audio loop autoPlay>
       <source src={audio} type="audio/mpeg" />
