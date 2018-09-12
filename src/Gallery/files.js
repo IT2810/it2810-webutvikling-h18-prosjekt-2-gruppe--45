@@ -9,7 +9,7 @@ export const subCategories = {
 
 const files = {
   audio: {
-    fire: ['fireplace.mp3', 'feuer.mp3', 'fire1.mp3', 'fire2.mp3'],
+    flames: ['fireplace.mp3', 'feuer.mp3', 'fire1.mp3', 'fire2.mp3'],
     pigs: ['double-snort.mp3', 'pig.mp3', 'oink.mp3', 'snorting-pig.mp3'],
     weather: ['hailstorm.mp3', 'rain.mp3', 'thunder.mp3', 'wind.mp3'],
   },
