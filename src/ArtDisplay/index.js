@@ -8,13 +8,13 @@ const Container = ({ children }) => (
 );
 
 const getImageLink = (selectedImage, entry) =>
-  `images/${selectedImage}/${files.images[selectedImage][entry]}`;
+  `images/${selectedImage}/${files.images[selectedImage][entry].name}`;
 
 const getAudioLink = (selectedAudio, entry) =>
-  `audio/${selectedAudio}/${files.audio[selectedAudio][entry]}`;
+  `audio/${selectedAudio}/${files.audio[selectedAudio][entry].name}`;
 
 const getTextLink = (selectedText, entry) =>
-  `text/${selectedText}/${files.text[selectedText][entry]}`;
+  `text/${selectedText}/${files.text[selectedText][entry].name}`;
 
 class ArtDisplay extends Component {
   state = {
@@ -131,11 +131,18 @@ class ArtDisplay extends Component {
       return <Container>Loading</Container>;
     }
 
+    const visibleFiles = {
+      text: files.text[this.props.selectedText][this.props.entry],
+      audio: files.audio[this.props.selectedAudio][this.props.entry],
+      image: files.images[this.props.selectedImage][this.props.entry],
+    };
+
     return (
       <Container>
         <ArtDisplayView
           image={this.state.image}
           text={this.state.text}
+          files={visibleFiles}
           audio={getAudioLink(this.props.selectedAudio, this.props.entry)}
         />
       </Container>
