@@ -29,7 +29,7 @@ const ArtPicker = ({
           name={name}
           key={key}
           onClick={() => onChange(key)}
-          className={entry === key && 'selected'}
+          className={(entry === key && 'selected tabs') || 'tabs'}
         />
       ))}
     </div>

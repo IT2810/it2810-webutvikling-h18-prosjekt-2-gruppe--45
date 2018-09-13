@@ -16,7 +16,6 @@
       "art-display media-picker";
   }
   */
-
   .gallery {
     display: grid;
     grid-template-columns: auto auto auto;
