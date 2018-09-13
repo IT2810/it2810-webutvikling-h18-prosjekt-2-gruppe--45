@@ -3,6 +3,7 @@
   grid-area: art-display;
   padding: 1em;
   border: 1px solid black;
+  border-top: none;
 }
 
 .text {
