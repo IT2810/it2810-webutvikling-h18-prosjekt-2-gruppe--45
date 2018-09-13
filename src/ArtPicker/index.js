@@ -7,6 +7,7 @@ const ArtPicker = ({
   selectedImage,
   selectedAudio,
   selectedText,
+  entry,
   onChange,
 }) => {
   // Ensure there are enough entries able for each media type.
@@ -24,7 +25,12 @@ const ArtPicker = ({
   return (
     <div className="art-picker">
       {titles.map(({ name, key }) => (
-        <Tab name={name} key={key} onClick={() => onChange(key)} />
+        <Tab
+          name={name}
+          key={key}
+          onClick={() => onChange(key)}
+          className={entry === key && 'selected'}
+        />
       ))}
     </div>
   );
