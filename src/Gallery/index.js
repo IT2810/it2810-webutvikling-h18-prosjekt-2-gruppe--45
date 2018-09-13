@@ -94,6 +94,7 @@ class Gallery extends Component {
           selectedImage={this.state.image}
           selectedAudio={this.state.audio}
           selectedText={this.state.text}
+          entry={this.state.entry}
         />
 
         <ArtDisplay

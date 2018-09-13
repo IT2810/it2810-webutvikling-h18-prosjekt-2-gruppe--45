@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Tab = ({ name, onClick }) => <div onClick={onClick}>{name}</div>;
+const Tab = ({ name, ...rest }) => <div {...rest}>{name}</div>;
 
 export default Tab;
