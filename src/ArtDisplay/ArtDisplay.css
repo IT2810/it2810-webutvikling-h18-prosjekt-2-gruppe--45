@@ -4,3 +4,7 @@
   padding: 1em;
   border: 1px solid black;
 }
+
+.text {
+  white-space: pre-wrap;
+}
