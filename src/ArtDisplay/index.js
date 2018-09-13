@@ -8,13 +8,13 @@ const Container = ({ children }) => (
 );
 
 const getImageLink = (selectedImage, entry) =>
-  `images/${selectedImage}/${files.images[selectedImage][entry]}`;
+  `images/${selectedImage}/${files.images[selectedImage][entry].name}`;
 
 const getAudioLink = (selectedAudio, entry) =>
-  `audio/${selectedAudio}/${files.audio[selectedAudio][entry]}`;
+  `audio/${selectedAudio}/${files.audio[selectedAudio][entry].name}`;
 
 const getTextLink = (selectedText, entry) =>
-  `text/${selectedText}/${files.text[selectedText][entry]}`;
+  `text/${selectedText}/${files.text[selectedText][entry].name}`;
 
 class ArtDisplay extends Component {
   state = {

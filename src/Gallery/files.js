@@ -9,26 +9,132 @@ export const subCategories = {
 
 const files = {
   audio: {
-    flames: ['fireplace.mp3', 'feuer.mp3', 'fire1.mp3', 'fire2.mp3'],
-    pigs: ['double-snort.mp3', 'pig.mp3', 'oink.mp3', 'snorting-pig.mp3'],
-    weather: ['hailstorm.mp3', 'rain.mp3', 'thunder.mp3', 'wind.mp3'],
+    flames: [
+      {
+        name: 'fireplace.mp3',
+      },
+      {
+        name: 'feuer.mp3',
+      },
+      {
+        name: 'fire1.mp3',
+      },
+      {
+        name: 'fire2.mp3',
+      },
+    ],
+
+    pigs: [
+      {
+        name: 'double-snort.mp3',
+      },
+      {
+        name: 'pig.mp3',
+      },
+      {
+        name: 'oink.mp3',
+      },
+      {
+        name: 'snorting-pig.mp3',
+      },
+    ],
+
+    weather: [
+      {
+        name: 'hailstorm.mp3',
+      },
+      {
+        name: 'rain.mp3',
+      },
+      {
+        name: 'thunder.mp3',
+      },
+      {
+        name: 'wind.mp3',
+      },
+    ],
   },
 
   images: {
-    chicken: ['chicken1.svg', 'chicken2.svg', 'chicken3.svg', 'chicken4.svg'],
-    flames: ['flames1.svg', 'flames2.svg', 'flames3.svg', 'flames4.svg'],
-    weather: ['weather1.svg', 'weather2.svg', 'weather3.svg', 'weather4.svg'],
+    chicken: [
+      {
+        name: 'chicken1.svg',
+      },
+      {
+        name: 'chicken2.svg',
+      },
+      {
+        name: 'chicken3.svg',
+      },
+      {
+        name: 'chicken4.svg',
+      },
+    ],
+
+    flames: [
+      {
+        name: 'flames1.svg',
+      },
+      {
+        name: 'flames2.svg',
+      },
+      {
+        name: 'flames3.svg',
+      },
+      {
+        name: 'flames4.svg',
+      },
+    ],
+
+    weather: [
+      {
+        name: 'weather1.svg',
+      },
+      {
+        name: 'weather2.svg',
+      },
+      {
+        name: 'weather3.svg',
+      },
+      {
+        name: 'weather4.svg',
+      },
+    ],
   },
 
   text: {
     flames: [
-      'burning1.json',
-      'burning2.json',
-      'burning3.json',
-      'burning4.json',
+      {
+        name: 'burning1.json',
+      },
+      {
+        name: 'burning2.json',
+      },
+      {
+        name: 'burning3.json',
+      },
+      {
+        name: 'burning4.json',
+      },
     ],
-    jokes: ['joke1.json', 'joke2.json', 'joke3.json', 'joke4.json'],
-    songs: ['songs1.json', 'songs2.json', 'songs3.json', 'songs4.json'],
+
+    jokes: [
+      {
+        name: 'joke1.json',
+      },
+      {
+        name: 'joke2.json',
+      },
+      { name: 'joke3.json' },
+      { name: 'joke4.json' },
+    ],
+
+    songs: [
+      { name: 'songs1.json' },
+      { name: 'songs2.json' },
+      { name: 'songs3.json' },
+      { name: 'songs4.json' },
+    ],
   },
 };
 
