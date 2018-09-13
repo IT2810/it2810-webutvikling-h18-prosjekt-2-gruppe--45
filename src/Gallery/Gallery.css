@@ -4,18 +4,12 @@
     'art-picker'
     'art-display'
     'media-picker';
+  -webkit-box-shadow: 0 1px #000;
+  -moz-box-shadow: 0 1px #000;
+  box-shadow: 0 1px #000;
 }
 
 @media (min-width: 800px) {
-  /*.gallery {
-    grid-template-areas:
-      "art-picker media-picker"
-      "art-display media-picker"
-      "art-display media-picker"
-      "art-display media-picker"
-      "art-display media-picker";
-  }
-  */
   .gallery {
     display: grid;
     grid-template-columns: auto auto auto;

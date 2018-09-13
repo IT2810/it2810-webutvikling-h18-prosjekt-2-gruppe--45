@@ -1,5 +1,10 @@
+svg {
+  max-width: 500px;
+  width: 100%;
+}
+
 .art-display {
-  background: blue;
+  background: #f2fcfc;
   grid-area: art-display;
   padding: 1em;
   border: 1px solid black;

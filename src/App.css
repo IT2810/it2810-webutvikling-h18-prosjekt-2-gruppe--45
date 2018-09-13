@@ -1,3 +1,7 @@
+* {
+  font-family: Verdana, Helvetica, Serif Arial, monospace;
+}
+
 .container {
   width: 90%;
   margin: 1em auto;

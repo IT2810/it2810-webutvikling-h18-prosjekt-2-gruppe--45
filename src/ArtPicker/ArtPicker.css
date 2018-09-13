@@ -1,14 +1,23 @@
 .art-picker {
   display: flex;
   grid-area: art-picker;
-  max-height: 4em;
+  max-height: 3em;
+}
+
+.tabs:last-child {
+  border-right: 1px solid black;
+}
+
+.tabs:nth-child(n + 2) {
+  border-left: none;
 }
 
 .tabs {
-  background-color: lightgray;
+  background-color: white;
   cursor: pointer;
   flex: 1;
-  padding: 1em;
+  font-size: 1.3em;
+  padding: 0.5em;
   text-align: center;
   border: 1px solid black;
   -webkit-border-radius: 0.1em;
@@ -21,6 +30,7 @@
 }
 
 .selected {
-  background-color: blue;
+  background-color: #edffff;
   border-bottom: none;
+  text-decoration: underline;
 }
