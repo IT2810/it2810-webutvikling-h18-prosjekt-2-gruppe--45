@@ -131,11 +131,18 @@ class ArtDisplay extends Component {
       return <Container>Loading</Container>;
     }
 
+    const visibleFiles = {
+      text: files.text[this.props.selectedText][this.props.entry],
+      audio: files.audio[this.props.selectedAudio][this.props.entry],
+      image: files.images[this.props.selectedImage][this.props.entry],
+    };
+
     return (
       <Container>
         <ArtDisplayView
           image={this.state.image}
           text={this.state.text}
+          files={visibleFiles}
           audio={getAudioLink(this.props.selectedAudio, this.props.entry)}
         />
       </Container>
