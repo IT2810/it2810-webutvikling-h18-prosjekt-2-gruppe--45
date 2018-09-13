@@ -27,15 +27,23 @@ const files = {
     pigs: [
       {
         name: 'double-snort.mp3',
+        author: 'SoundBible',
+        link: 'http://soundbible.com/suggest.php?q=pig&x=0&y=0',
       },
       {
         name: 'pig.mp3',
+        author: 'SoundBible',
+        link: 'http://soundbible.com/suggest.php?q=pig&x=0&y=0',
       },
       {
         name: 'oink.mp3',
+        author: 'SoundBible',
+        link: 'http://soundbible.com/suggest.php?q=pig&x=0&y=0',
       },
       {
         name: 'snorting-pig.mp3',
+        author: 'SoundBible',
+        link: 'http://soundbible.com/suggest.php?q=pig&x=0&y=0',
       },
     ],
 
@@ -67,15 +75,24 @@ const files = {
     chicken: [
       {
         name: 'chicken1.svg',
+        author: 'Wikimedia Commons',
+        link: 'https://commons.wikimedia.org/wiki/File:Chicken_clipart.svg',
       },
       {
         name: 'chicken2.svg',
+        author: 'ShareIcon',
+        link:
+          'https://www.shareicon.net/meat-food-supper-lunch-meal-dinner-730108',
       },
       {
         name: 'chicken3.svg',
+        author: 'Flaticon',
+        link: 'https://www.flaticon.com/free-icon/chicken_99067',
       },
       {
         name: 'chicken4.svg',
+        author: 'Wikipedia',
+        link: 'https://en.m.wikipedia.org/wiki/File:Chicken_silhouette_02.svg',
       },
     ],
 
@@ -137,12 +154,24 @@ const files = {
     jokes: [
       {
         name: 'joke1.json',
+        author: 'unknown',
+        link: 'https://humoristen.no/',
       },
       {
         name: 'joke2.json',
+        author: 'unknown',
+        link: 'https://humoristen.no/',
       },
-      { name: 'joke3.json' },
-      { name: 'joke4.json' },
+      {
+        name: 'joke3.json',
+        author: 'unknown',
+        link: 'https://humoristen.no/',
+      },
+      {
+        name: 'joke4.json',
+        author: 'unknown',
+        link: 'https://humoristen.no/',
+      },
     ],
 
     songs: [
