@@ -1,14 +1,20 @@
+.art-display {
+  grid-area: art-display;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
 svg {
-  max-width: 500px;
   width: 100%;
 }
 
-.art-display {
-  background: #f2fcfc;
-  grid-area: art-display;
-  padding: 1em;
-  border: 1px solid black;
-  border-top: none;
+.image-view {
+  width: 50%;
+  align-self: center;
 }
 
 .text {

@@ -1,23 +1,17 @@
 .media-picker {
-  background: lightskyblue;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
   grid-area: media-picker;
-  padding: 0.5em;
-  min-width: 150px;
-  -webkit-box-shadow: 1px 1px #000;
-  -moz-box-shadow: 1px 1px #000;
-  box-shadow: 1px 1px #000;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 1rem;
+  background: #fff;
 }
 
-.flex {
+.media-picker-categories {
   display: flex;
 }
 
-.flex-one {
+.media-category {
   flex: 1;
-  padding: 1em;
 }
 
 li {
@@ -34,7 +28,14 @@ input {
 }
 
 @media (min-width: 800px) {
-  .flex {
-    display: block;
+  .media-picker-categories {
+    flex-direction: column;
+  }
+
+  .media-picker {
+    border-radius: 0 5px 0 0;
+    border-top: 1px solid #ccc;
+    border-left: none;
+    margin-top: -1px;
   }
 }

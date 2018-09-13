@@ -15,8 +15,8 @@ const MediaPicker = ({
 }) => (
   <div className="media-picker">
     <form>
-      <div className={'flex'}>
-        <div className={'flex-one'}>
+      <div className="media-picker-categories">
+        <div className="media-category">
           <h2>Bilder</h2>
           <div>
             <ul>
@@ -59,7 +59,7 @@ const MediaPicker = ({
             </ul>
           </div>
         </div>
-        <div className={'flex-one'}>
+        <div className="media-category">
           <h2>Lyder</h2>
           <div>
             <ul>
@@ -102,7 +102,7 @@ const MediaPicker = ({
             </ul>
           </div>
         </div>
-        <div className={'flex-one'}>
+        <div className="media-category">
           <h2>Tekst</h2>
           <div>
             <ul>

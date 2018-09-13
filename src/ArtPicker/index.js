@@ -14,6 +14,7 @@ const ArtPicker = ({
   const available = Math.min(
     files.images[selectedImage].length,
     files.audio[selectedAudio].length,
+    files.text[selectedText].length,
   );
 
   // Create simple titles for each exhibition.
@@ -29,7 +30,7 @@ const ArtPicker = ({
           name={name}
           key={key}
           onClick={() => onChange(key)}
-          className={(entry === key && 'selected tabs') || 'tabs'}
+          className={entry === key && 'selected'}
         />
       ))}
     </div>
