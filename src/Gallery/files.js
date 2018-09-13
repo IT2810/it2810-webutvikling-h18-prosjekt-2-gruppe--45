@@ -12,15 +12,23 @@ const files = {
     flames: [
       {
         name: 'fireplace.mp3',
+        author: 'Partners In Rhyme',
+        link: 'https://www.freesoundeffects.com/free-track/fireplace-426535/',
       },
       {
         name: 'feuer.mp3',
+        author: 'Partners In Rhyme',
+        link: 'https://www.freesoundeffects.com/free-track/feuer-426782/',
       },
       {
         name: 'fire1.mp3',
+        author: 'Partners In Rhyme',
+        link: 'https://www.freesoundeffects.com/free-track/fire-89306/',
       },
       {
         name: 'fire2.mp3',
+        author: 'Partners In Rhyme',
+        link: 'https://www.freesoundeffects.com/free-track/fire2-89307/',
       },
     ],
 
@@ -99,15 +107,23 @@ const files = {
     flames: [
       {
         name: 'flames1.svg',
+        author: 'HANNAH',
+        link: 'http://www.clker.com/clipart-blue-fire-1.html',
       },
       {
         name: 'flames2.svg',
+        author: 'Dryicons',
+        link: 'https://dryicons.com/icon/candle-icon-9334',
       },
       {
         name: 'flames3.svg',
+        author: 'Icomoon',
+        link: 'https://www.flaticon.com/free-icon/fire_24143',
       },
       {
         name: 'flames4.svg',
+        author: 'Juhele',
+        link: 'https://openclipart.org/detail/297748/forest-fire',
       },
     ],
 
@@ -139,15 +155,24 @@ const files = {
     flames: [
       {
         name: 'burning1.json',
+        author: 'Emily Dickinson',
+        link: 'https://www.bartleby.com/113/1113.html',
       },
       {
         name: 'burning2.json',
+        author: 'C. D. Wright',
+        link:
+          'https://www.poetryfoundation.org/poems/51055/flame-56d22e8d6c815',
       },
       {
         name: 'burning3.json',
+        author: 'W. Shakespeare',
+        link: 'http://www.shakespeares-sonnets.com/sonnet/45',
       },
       {
         name: 'burning4.json',
+        author: 'W. Blake',
+        link: 'https://www.poetryfoundation.org/poems/43687/the-tyger',
       },
     ],
 
