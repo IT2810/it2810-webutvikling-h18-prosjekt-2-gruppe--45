@@ -1,18 +1,24 @@
 .gallery {
   display: grid;
   grid-template-areas:
+    'media-picker'
     'art-picker'
-    'art-display'
-    'media-picker';
+    'art-display';
+}
+
+.media-picker {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 800px) {
   .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) 12rem;
   }
 
   .media-picker {
+    margin: 0;
+
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 2;
