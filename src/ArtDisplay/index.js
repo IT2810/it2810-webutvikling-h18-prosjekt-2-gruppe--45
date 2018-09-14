@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ArtDisplayView from './ArtDisplayView';
 import './ArtDisplay.css';
 import files from '../Gallery/files';
+import spinner from './spinner.svg';
 
 const Container = ({ children }) => (
   <div className="art-display">{children}</div>
@@ -128,7 +129,11 @@ class ArtDisplay extends Component {
     }
 
     if (this.state.loading) {
-      return <Container>Loading</Container>;
+      return (
+        <Container>
+          <img src={spinner} className="spinner" />
+        </Container>
+      );
     }
 
     const visibleFiles = {
