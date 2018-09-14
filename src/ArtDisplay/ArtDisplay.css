@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   background: #fff;
+  justify-content: center;
 }
 
 svg {
@@ -22,6 +23,11 @@ svg {
 
 .text {
   white-space: pre-wrap;
+}
+
+.spinner {
+  width: 10%;
+  align-self: center;
 }
 
 @media (min-width: 800px) {
