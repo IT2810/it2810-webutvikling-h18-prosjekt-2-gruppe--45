@@ -1,9 +1,13 @@
 .gallery {
   display: grid;
   grid-template-areas:
+    'media-picker'
     'art-picker'
-    'art-display'
-    'media-picker';
+    'art-display';
+}
+
+.media-picker {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 800px) {
@@ -13,6 +17,8 @@
   }
 
   .media-picker {
+    margin: 0;
+
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 2;
