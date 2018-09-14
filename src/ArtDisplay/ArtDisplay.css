@@ -1,7 +1,8 @@
 .art-display {
   grid-area: art-display;
   padding: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
+  border-bottom-color: #ccc;
   border-top: none;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,11 @@ svg {
 }
 
 @media (min-width: 800px) {
+  .art-display {
+    border-bottom-color: #333;
+    border-right-color: #ccc;
+  }
+
   svg {
     width: 60%;
   }
