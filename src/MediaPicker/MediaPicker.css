@@ -1,7 +1,6 @@
 .media-picker {
   grid-area: media-picker;
   border: 1px solid #ccc;
-  border-top: none;
   padding: 1rem;
   background: #fff;
 }

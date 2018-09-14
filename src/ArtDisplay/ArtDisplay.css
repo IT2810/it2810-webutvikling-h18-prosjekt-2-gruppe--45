@@ -8,12 +8,8 @@
   background: #fff;
 }
 
-svg {
-  width: 100%;
-}
-
 .image-view {
-  width: 50%;
+  \width: auto;
   align-self: center;
 }
 
