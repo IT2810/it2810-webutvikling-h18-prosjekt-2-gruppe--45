@@ -14,16 +14,16 @@
   flex: 1;
 }
 
-li {
+.media-picker li {
   list-style-type: none;
 }
 
-ul {
+.media-picker ul {
   padding: 0;
 }
 
-label,
-input {
+.media-picker label,
+.media-picker input {
   cursor: pointer;
 }
 

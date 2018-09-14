@@ -5,34 +5,38 @@ const ArtDisplay = ({ image, audio, text, files }) => (
     <div dangerouslySetInnerHTML={{ __html: image }} className="image-view" />
 
     <div>
-      <h3>{text.title}</h3>
+      <h2 className="title">{text.title}</h2>
+
       <p className="text">{text.body}</p>
-      <p>{'~ ' + text.author}</p>
+
+      <p className="author">~ {text.author}</p>
     </div>
 
     <audio loop autoPlay>
       <source src={audio} type="audio/mpeg" />
     </audio>
 
-    <h4>Attribution</h4>
+    <h3 className="attribution-header">Attribution</h3>
 
-    {files.image.author && (
-      <p>
-        Image courtesy of <a href={files.image.link}>{files.image.author}</a>
-      </p>
-    )}
+    <ul className="attribution-list">
+      {files.image.author && (
+        <li>
+          Image courtesy of <a href={files.image.link}>{files.image.author}</a>
+        </li>
+      )}
 
-    {files.text.author && (
-      <p>
-        Text courtesy of <a href={files.text.link}>{files.text.author}</a>
-      </p>
-    )}
+      {files.text.author && (
+        <li>
+          Text courtesy of <a href={files.text.link}>{files.text.author}</a>
+        </li>
+      )}
 
-    {files.audio.author && (
-      <p>
-        Audio courtesy of <a href={files.audio.link}>{files.audio.author}</a>
-      </p>
-    )}
+      {files.audio.author && (
+        <li>
+          Audio courtesy of <a href={files.audio.link}>{files.audio.author}</a>
+        </li>
+      )}
+    </ul>
   </Fragment>
 );
 
