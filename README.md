@@ -25,12 +25,10 @@ All utviklingen i dette prosjektet foregikk på GitHub. Vi har forsøkt å dekom
 
 ## Testing
 
-Gikk frem med å teste med responsiv modus i utviklerverktøyet i forskjellige enheter på en og en nettleser.
-Først i chrome for å teste oppførsel og deretter gjorde vi det samme i mozilla firefox og safari.
+Testingen i dette prosjektet fokuserte på testing av brukergrensesnittet og responsivt design.
+
+Under utviklingen brukte vi primært Chrome og testet det responsive designet ved å bruke utviklerverktøyene til å gå gjennom forskjellige skjermstørrelser som korresponderte til forskjellige enheter, slik at vi fikk sjekket at designet og media queries holdt vann på de fleste tenkelige skjermstørrelser. I tillegg testet vi nettsiden i Chrome på mobil i både horisontal og vertikal orientasjon ved hjelp av Chrome developer tools, hvor man kan bruke USB-tilkoblingen til å få frem nettsiden på mobil. Vi har også testet nettsiden ved hjelp av gratisversjonen av Browserstack, som lar oss få tilgang til flere virtuelle maskiner med forskjellige nettlesere tilgjengelig, deriblant iOS, som ingen av oss hadde tilgang til. Blant disse var Safari på Mac og iOS. Vi testet også i Firefox på desktop og gikk også der systematisk igjennom flere vindusstørrelser, slik at vi kunne verifisere at media queries var satt fornuftig. Vi fikk dermed testet prosjektet på mer enn tre forskjellige enheter, deriblant flere mobiler og datamaskiner - alle gruppemedlemmene testet selvsagt programmet på sin egen maskin og sin egen mobil.
 
 ## Kilder
 
-Den eneste delen, med unntak av bilder, hvor vi har gjenbrukt kode fra noen andre er svg spinneren.
-Kilden til denne er: www.kilde.com
-
-Kildene til tekst, bilde og lyd er oppført i galleriet.
+Vi har ikke lagd filene i galleriet selv, men funnet bilder man har lov til å bruke på internettet. Kildene til tekstfilene, bilder og lyd står i galleriet når man velger bildet. Vi har funnet et spinner-ikon på internettet og latt det stå igjen en link i koden, slik som forfatteren ønsker.
