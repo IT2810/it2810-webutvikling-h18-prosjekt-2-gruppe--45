@@ -9,7 +9,7 @@ const ArtDisplay = ({ image, audio, text, files }) => (
 
       <p className="text">{text.body}</p>
 
-      <p className="author">{text.author}</p>
+      <p className="author">~ {text.author}</p>
     </div>
 
     <audio loop autoPlay>
