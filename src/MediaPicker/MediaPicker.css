@@ -1,8 +1,41 @@
 .media-picker {
-  background: orange;
   grid-area: media-picker;
+  border: 1px solid #333;
+  border-top: none;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+
+.media-picker-categories {
+  display: flex;
+}
+
+.media-category {
+  flex: 1;
 }
 
 li {
   list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .media-picker-categories {
+    flex-direction: column;
+  }
+
+  .media-picker {
+    border-radius: 0 5px 0 0;
+    border-top: 1px solid #333;
+    border-left: none;
+    margin-top: -1px;
+  }
 }
