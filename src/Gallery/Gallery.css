@@ -9,7 +9,7 @@
 @media (min-width: 800px) {
   .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) 12rem;
   }
 
   .media-picker {
