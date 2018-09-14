@@ -8,6 +8,11 @@
   flex-direction: column;
   background: #fff;
   justify-content: center;
+  align-content: center;
+}
+
+.art-display > div:nth-child(2) {
+  align-self: center;
 }
 
 svg {
