@@ -8,12 +8,34 @@ const Container = ({ children }) => (
   <div className="art-display">{children}</div>
 );
 
+/**
+ * Return the image path based on selected entry and category
+ * Entry is given by tabs and category is from user picking media (radiobuttons)
+ * @param selectedImage     chosen image category to be selected
+ * @param entry             the index of chosen image from the category
+ * @returns {string}        the path to selected image
+ */
+
 const getImageLink = (selectedImage, entry) =>
   `images/${selectedImage}/${files.images[selectedImage][entry].name}`;
 
+/**
+ * Return the audio path based on selected entry and category
+ * Entry is given by tabs and category is from user picking media (radiobuttons)
+ * @param selectedAudio     chosen audio to be selected
+ * @param entry             the index of chosen audio
+ * @returns {string}        the path to selected audio
+ */
 const getAudioLink = (selectedAudio, entry) =>
   `audio/${selectedAudio}/${files.audio[selectedAudio][entry].name}`;
 
+/**
+ * Return the text path based on selected entry and category
+ * Entry is given by tabs and category is from user picking media (radiobuttons)
+ * @param selectedText      chosen text to be selected
+ * @param entry             the index of chosen text
+ * @returns {string}        the path to selected text
+ */
 const getTextLink = (selectedText, entry) =>
   `text/${selectedText}/${files.text[selectedText][entry].name}`;
 
@@ -35,6 +57,10 @@ class ArtDisplay extends Component {
     cache: {},
   };
 
+  /**
+   *
+   * @returns {Promise<void>}
+   */
   load = async () => {
     // Reset errors and notify the user that data is currently loading.
     this.setState({
@@ -59,6 +85,10 @@ class ArtDisplay extends Component {
     });
   };
 
+  /**
+   *
+   * @returns {Promise<void>}
+   */
   loadImage = async () => {
     const path = getImageLink(this.props.selectedImage, this.props.entry);
 
@@ -84,6 +114,10 @@ class ArtDisplay extends Component {
     }));
   };
 
+  /**
+   *
+   * @returns {Promise<void>}
+   */
   loadText = async () => {
     const path = getTextLink(this.props.selectedText, this.props.entry);
 
@@ -109,10 +143,17 @@ class ArtDisplay extends Component {
     }));
   };
 
+  /**
+   *
+   */
   componentDidMount() {
     this.load();
   }
 
+  /**
+   *
+   * @param prevProps
+   */
   componentDidUpdate(prevProps) {
     if (this.props !== prevProps) {
       this.load();

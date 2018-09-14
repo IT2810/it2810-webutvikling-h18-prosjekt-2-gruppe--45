@@ -50,6 +50,10 @@ class Gallery extends Component {
     };
   }
 
+  /**
+   * Handles change of image when selecting image category
+   * @param event   The onclick event from user picking media category
+   */
   handleImageChange = event => {
     this.setState({
       image: event.currentTarget.value,
@@ -57,6 +61,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of audio when selecting audio category
+   * @param event   The onclick event from user picking media category
+   */
   handleAudioChange = event => {
     this.setState({
       audio: event.currentTarget.value,
@@ -64,6 +72,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of text when selecting text category
+   * @param event   The onclick event from user picking media category
+   */
   handleTextChange = event => {
     this.setState({
       text: event.currentTarget.value,
@@ -71,6 +83,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of key when key is changed
+   * @param key   key for selected element
+   */
   handleArtChange = key => {
     this.setState({
       entry: key,
