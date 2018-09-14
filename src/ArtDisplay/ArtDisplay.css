@@ -6,10 +6,17 @@
   display: flex;
   flex-direction: column;
   background: #fff;
+  min-width: 70%;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
 }
 
 .image-view {
-  \width: auto;
+  width: auto;
   align-self: center;
 }
 
