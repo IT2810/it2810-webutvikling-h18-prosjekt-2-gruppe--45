@@ -8,29 +8,27 @@ import './Gallery.css';
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    /**
-     * Creates an array 'randomIndexes' that contains three random indexes
-     * between 0 and 2
-     */
+
+    // Create an array with three random indexes between 0 and 2.
     let randomIndexes = [];
 
     for (let i = 0; i < 3; i++) {
       randomIndexes.push(Math.floor(Math.random() * 3));
     }
 
-    /**
-     * Lists of strings for available images, audios and texts
-     */
+    // Lists of strings for available categories for images, audios and texts.
     const IMAGES = [
       subCategories.CHICKEN,
       subCategories.FLAMES,
       subCategories.WEATHER,
     ];
+
     const AUDIOS = [
       subCategories.PIGS,
       subCategories.FLAMES,
       subCategories.WEATHER,
     ];
+
     const TEXTS = [
       subCategories.FLAMES,
       subCategories.JOKES,
@@ -38,8 +36,8 @@ class Gallery extends Component {
     ];
 
     /**
-     * Sets the chosen category based on the random indexes
-     * States for the three formats of categories
+     * States for the three formats of categories. The initial
+     * configuration is randomized.
      * @type {{image: string, audio: string, text: string}}
      */
     this.state = {
@@ -50,6 +48,10 @@ class Gallery extends Component {
     };
   }
 
+  /**
+   * Handles change of image when selecting image category.
+   * @param event The click event from user picking media category.
+   */
   handleImageChange = event => {
     this.setState({
       image: event.currentTarget.value,
@@ -57,6 +59,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of audio when selecting audio category.
+   * @param event The click event from user picking media category.
+   */
   handleAudioChange = event => {
     this.setState({
       audio: event.currentTarget.value,
@@ -64,6 +70,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of text when selecting text category.
+   * @param event The click event from user picking media category.
+   */
   handleTextChange = event => {
     this.setState({
       text: event.currentTarget.value,
@@ -71,6 +81,10 @@ class Gallery extends Component {
     });
   };
 
+  /**
+   * Handles change of entry when a tab is clicked.
+   * @param key The key for the selected element.
+   */
   handleArtChange = key => {
     this.setState({
       entry: key,

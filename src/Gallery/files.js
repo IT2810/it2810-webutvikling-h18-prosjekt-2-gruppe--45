@@ -1,3 +1,6 @@
+// Constants used to enforce consistent spelling - using strings
+// can often result in errors being hard to debug due to misspellings
+// or such, and this reduces that problem.
 export const subCategories = {
   CHICKEN: 'chicken',
   PIGS: 'pigs',
@@ -7,6 +10,9 @@ export const subCategories = {
   SONGS: 'songs',
 };
 
+// Contains file types, their categories and the files in each category
+// as well as credits information for these files which is shown at the
+// bottom of the art display.
 const files = {
   audio: {
     flames: [

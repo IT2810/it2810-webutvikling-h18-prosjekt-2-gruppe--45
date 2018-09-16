@@ -8,12 +8,33 @@ const Container = ({ children }) => (
   <div className="art-display">{children}</div>
 );
 
+/**
+ * Return the image path based on selected entry and category configuration.
+ * Entry is given by tabs and category is from user picking media categories.
+ * @param selectedImage     chosen image category to be selected
+ * @param entry             the index of chosen image from the category configuration.
+ * @returns {string}        the path to selected image
+ */
 const getImageLink = (selectedImage, entry) =>
   `images/${selectedImage}/${files.images[selectedImage][entry].name}`;
 
+/**
+ * Return the audio path based on selected entry and category configuration.
+ * Entry is given by tabs and category is from user picking media categories.
+ * @param selectedAudio     chosen audio to be selected
+ * @param entry             the index of chosen audio
+ * @returns {string}        the path to selected audio
+ */
 const getAudioLink = (selectedAudio, entry) =>
   `audio/${selectedAudio}/${files.audio[selectedAudio][entry].name}`;
 
+/**
+ * Return the text path based on selected entry and category
+ * Entry is given by tabs and category is from user picking media categories.
+ * @param selectedText      chosen text to be selected
+ * @param entry             the index of chosen text
+ * @returns {string}        the path to selected text
+ */
 const getTextLink = (selectedText, entry) =>
   `text/${selectedText}/${files.text[selectedText][entry].name}`;
 
@@ -35,6 +56,11 @@ class ArtDisplay extends Component {
     cache: {},
   };
 
+  /**
+   * Loads image and text data from the server. While data is loading, a loading
+   * icon is displayed. If any of the requests fail, an error message is shown.
+   * @returns {Promise<void>}
+   */
   load = async () => {
     // Reset errors and notify the user that data is currently loading.
     this.setState({
@@ -53,7 +79,7 @@ class ArtDisplay extends Component {
       });
     }
 
-    // Remove the loading notification.
+    // Remove the loading notification as we either errored or finished loading successfully.
     this.setState({
       loading: false,
     });
@@ -62,6 +88,7 @@ class ArtDisplay extends Component {
   loadImage = async () => {
     const path = getImageLink(this.props.selectedImage, this.props.entry);
 
+    // Return the aready stored image if we have cached it.
     if (this.state.cache[path]) {
       this.setState({
         image: this.state.cache[path],
@@ -77,6 +104,7 @@ class ArtDisplay extends Component {
     this.setState(prevState => ({
       image: data,
 
+      // Update the cache with the new image.
       cache: {
         ...prevState.cache,
         [path]: data,
@@ -87,6 +115,7 @@ class ArtDisplay extends Component {
   loadText = async () => {
     const path = getTextLink(this.props.selectedText, this.props.entry);
 
+    // Return the stored text if we have cached the data at this path.
     if (this.state.cache[path]) {
       this.setState({
         text: this.state.cache[path],
@@ -102,6 +131,7 @@ class ArtDisplay extends Component {
     this.setState(prevState => ({
       text: data,
 
+      // Update the cache with the new entry.
       cache: {
         ...prevState.cache,
         [path]: data,
@@ -114,6 +144,8 @@ class ArtDisplay extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    // Need to check props to prevent an infinite loop where
+    // this method again triggers a rerender.
     if (this.props !== prevProps) {
       this.load();
     }
@@ -136,6 +168,8 @@ class ArtDisplay extends Component {
       );
     }
 
+    // Create a map which contains the config entries for the currently
+    // visible assets. This is used to fetch information about the file authors.
     const visibleFiles = {
       text: files.text[this.props.selectedText][this.props.entry],
       audio: files.audio[this.props.selectedAudio][this.props.entry],
