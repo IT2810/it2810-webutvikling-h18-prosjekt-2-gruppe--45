@@ -57,7 +57,8 @@ class ArtDisplay extends Component {
   };
 
   /**
-   *
+   * Loads image and text data from the server. While data is loading, a loading
+   * icon is displayed. If any of the requests fail, an error message is shown.
    * @returns {Promise<void>}
    */
   load = async () => {
