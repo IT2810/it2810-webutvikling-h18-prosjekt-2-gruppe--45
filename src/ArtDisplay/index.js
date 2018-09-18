@@ -163,7 +163,7 @@ class ArtDisplay extends Component {
     if (this.state.loading) {
       return (
         <Container>
-          <img src={spinner} className="spinner" />
+          <img src={spinner} alt="spinner" className="spinner" />
         </Container>
       );
     }
