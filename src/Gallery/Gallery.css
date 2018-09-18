@@ -1,0 +1,41 @@
+.gallery {
+  display: grid;
+  grid-template-areas:
+    'media-picker'
+    'art-picker'
+    'art-display';
+}
+
+.media-picker {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 12rem;
+  }
+
+  .media-picker {
+    margin: 0;
+
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+
+  .art-picker {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .art-display {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+}

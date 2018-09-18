@@ -1,0 +1,68 @@
+.art-display {
+  grid-area: art-display;
+  padding: 2rem;
+  border: 1px solid #333;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  justify-content: center;
+  align-content: center;
+}
+
+.art-display > div:nth-child(2) {
+  align-self: center;
+}
+
+.art-display svg {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  max-height: 25rem;
+}
+
+.image-view {
+  display: flex;
+  margin: 1em 0 1em 0;
+}
+
+.text {
+  white-space: pre-wrap;
+  border-left: 5px solid #063184;
+  padding-left: 1rem;
+}
+
+.author {
+  font-style: italic;
+}
+
+.spinner {
+  width: 10%;
+  align-self: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #063184;
+}
+
+.attribution-header {
+  font-size: 1.5rem;
+}
+
+.attribution-list {
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  .art-display {
+    border-right-color: #ccc;
+    border-radius: 0 0 0 5px;
+  }
+
+  .art-display svg {
+    width: 60%;
+  }
+}
