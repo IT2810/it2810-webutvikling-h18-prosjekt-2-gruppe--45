@@ -29,7 +29,7 @@ const MediaPicker = ({
                     checked={selectedImage === subCategories.CHICKEN}
                     onChange={onImageChange}
                   />
-                  Chickens
+                  Kylling
                 </label>
               </li>
               <li>
@@ -41,7 +41,7 @@ const MediaPicker = ({
                     checked={selectedImage === subCategories.FLAMES}
                     onChange={onImageChange}
                   />
-                  Flames
+                  Flammer
                 </label>
               </li>
               <li>
@@ -53,7 +53,7 @@ const MediaPicker = ({
                     checked={selectedImage === subCategories.WEATHER}
                     onChange={onImageChange}
                   />
-                  Weather
+                  Vær
                 </label>
               </li>
             </ul>
@@ -96,7 +96,7 @@ const MediaPicker = ({
                     checked={selectedAudio === subCategories.WEATHER}
                     onChange={onAudioChange}
                   />
-                  Weather
+                  Vær
                 </label>
               </li>
             </ul>
@@ -115,7 +115,7 @@ const MediaPicker = ({
                     checked={selectedText === subCategories.FLAMES}
                     onChange={onTextChange}
                   />
-                  Brennende dikt
+                  Dikt
                 </label>
               </li>
               <li>
