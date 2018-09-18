@@ -11,10 +11,6 @@
   align-content: center;
 }
 
-.art-display > div:nth-child(2) {
-  align-self: center;
-}
-
 .art-display svg {
   width: 100%;
   height: 100%;
