@@ -4,7 +4,10 @@
 
 Galgen, kort for gallerigenerator er et system som kombinerer forskjellige mediaressurser for å lage et slags interaktivt kunstverk. De genererte kunstverkene gir ikke særlig mye mening; kunsten ligger i surrealiteten i de resulterende kunstverkene. Vi har antatt at dette er greit, siden formålet med prosjektet er bare å implemenetere dynamisk funksjonalitet.
 
-Brukeren kan velge mellom tre forskjellige kategorier av bilder, tekster og lyd i en meny som på desksop er på høyresiden av galleriet. Basert på disse valgene genereres en slags utstilling som inneholder 4 bilder av denne typen som man velger blant i tabs på toppen.
+Brukeren kan velge mellom tre forskjellige kategorier av bilder, tekster og lyd i en meny som på desksop er på høyresiden av galleriet. Basert på disse valgene genereres en slags utstilling som inneholder 4 bilder av denne typen som man velger blant i tabs på toppen. Vi har et layout med tabs for å velge kunstverk i utstillingen på toppen, og en gallerikonfigurator på høyresiden hvor man velger hva som skal vises i galleriet. Vi synes at ut i fra de kravene som er gitt, var dette et fornuftig layout.
+
+- RESPONSIV DEZIGN
+- ut i fra kravene som er gitt synes vi dette var en fornuftig layout ting
 
 ## Teknologi
 
@@ -23,9 +26,9 @@ For å opprettholde kodekvalitet har vi brukt [Prettier](https://prettier.io) so
 
 Bildene, teksten og videofilene ligger lagret strukturert i undermapper under `public`. Dette er gjort slik at vi kan enkelt generere linker til disse filene og laste de inn dynamisk med hjelp av `fetch`, som er en ny og moderne native erstatning for XMLHttpRequest. Vi genererer en link til filene basert på valget av kategori, som er enkelt siden filene ligger gruppert i mapper basert på kategori. Vi har også filen `files.js` i `Gallery`-komponentet, som lagrer de forskjellige filene som er tilgjengelige i kategorier. Dette har vi slik at applikasjonen må ha oversikt over hvilke filer som faktisk ligger lagret på filsystemet. Vi valgte å lagre hver tekst som en egen JSON-fil, som i tillegg har blant annet en tittel. Vi mener dette ga mer mening enn å for eksempel ha en stor JSON-fil for alle tekstene, i tillegg blir det enklere å implementere slik med tanke på at filsystemet vårt er strukturert for å enkelt kunne generere linker til individuelle ressurser.
 
-Filer lastes kun in den første gangen de vises. Dette gjør vi blant annet med at `componentDidUpdate` i `ArtDisplay` laster inn data når enten tabben eller kategorivalgene oppdateres. Når dataen har blitt hentet, lagres resultatet i et objekt hvor lenken til ressursen er nøkkelen. På denne måten kan vi sjekke om vi allerede har lastet dataen - hvis lenken allerede ligger i objektet, trenger vi ikke hente den på nytt og kan bare returnere den lagrede dataen. Dette gjør at informsjonen lastes med en gang dersom brukeren blar frem og tilbake mellom tabs som allerede har blitt åpnet. Lyd bruker `audio`-taggen, vi har ikke implementert noe spesiell funksjonalitet her da det ikke var krav om det.
+Filer lastes kun in den første gangen de vises. Dette gjør vi blant annet med at `componentDidUpdate` i `ArtDisplay` laster inn data når enten tabben eller kategorivalgene oppdateres, i tillegg til at `componentDidMount` laster data når siden laster inn første gang. På grunn av mappestrukturen over, kan vi enkelt bruke staten i fra `Gallery` til å beregne linker til det som skal hentes på den nåværende tabben med den nåværende mediakonfigurasjonen. Når dataen har blitt hentet, lagres resultatet i et objekt hvor lenken til ressursen er nøkkelen. På denne måten kan vi sjekke om vi allerede har lastet dataen - hvis lenken allerede ligger i objektet, trenger vi ikke hente den på nytt og kan bare returnere den lagrede dataen. Dette gjør at informsjonen lastes med en gang dersom brukeren blar frem og tilbake mellom tabs som allerede har blitt åpnet. Lyd bruker `audio`-taggen, vi har ikke implementert noe spesiell funksjonalitet her da det ikke var krav om det.
 
-## Utforming
+## Utforming og responsivt design
 
 Siden er bygget mobile-first, det vil si at vi tok utgangspunkt i en liten skjerm på størrelse med en mobil og deretter brukte plassen bedre for større skjermer ved hjelp av media queries. Dette gjør det ganske enkelt å lage et flytende layout som tilpasser seg skjermens størrelse. Vi valgte å alltid ha teksten under bildet, da vi synes dette så best ut. Layout skiftes mellom beddeformat og høydeformat, ved at media pickeren og tab selectoren plasseres over kunstdisplayet når skjermen er liten nok. I breddeformatet plasseres media pickeren på siden av resten av galleriet.
 
@@ -39,4 +42,4 @@ Testingen i dette prosjektet fokuserte på testing av brukergrensesnittet og res
 
 ## Kilder
 
-Vi har ikke lagd filene i galleriet selv, men funnet bilder man har lov til å bruke på internettet. Kildene til tekstfilene, bilder og lyd står i galleriet når man velger bildet. Vi har funnet et spinner-ikon på internettet og latt det stå igjen en link i koden, slik som forfatteren ønsker.
+Vi har ikke lagd filene i galleriet selv, men funnet bilder man har lov til å bruke på internett. Kildene til tekstfilene, bilder og lyd står i galleriet når man velger bildet. Vi har funnet et spinner-ikon på internettet og latt det stå igjen en link i koden, slik som forfatteren ønsker.
