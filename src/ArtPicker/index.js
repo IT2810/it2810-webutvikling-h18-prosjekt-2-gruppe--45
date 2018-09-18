@@ -18,10 +18,14 @@ const ArtPicker = ({
   );
 
   // Create simple titles for each exhibition.
-  const titles = new Array(available).fill(0).map((_, i) => ({
-    name: `Bilde ${i + 1}`,
-    key: i,
-  }));
+  const titles = [];
+
+  for (let i = 0; i < available; i += 1) {
+    titles.push({
+      name: `Bilde ${i + 1}`,
+      key: i,
+    });
+  }
 
   return (
     <div className="art-picker">
